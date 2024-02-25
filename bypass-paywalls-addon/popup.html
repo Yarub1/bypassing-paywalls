@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+      .iframe-container {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Settings</h1>
+    <p>Use this tool to bypass paywalls and annoying subscription messages. By deleting cookies and manipulating the site through Google Bot. You also have two options if this does not work: either by using the temporary email service to create an account, so you do not have to enter your email or private information. Or by using the bugmenot service, but at your own responsibility.</p>
+    <label for="elementToDelete">Element to Delete:</label>
+    <input type="text" id="elementToDelete" placeholder="Enter element ID">
+    <label for="siteAddress">Enter Site Address:</label>
+    <input type="text" id="siteAddress" placeholder="https://www.theathletic.com">
+    <button id="deleteElement">Delete Element</button>
+    <button id="open10minemail">Open 10minemail.com</button>
+    <button id="openBugMeNot">Open BugMeNot.com</button>
+    <!-- Containers for the iframes -->
+    <div id="iframeContainer1" class="iframe-container"></div>
+    <div id="iframeContainer2" class="iframe-container"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>
