@@ -49,20 +49,10 @@ function bypassPaywall() {
     .forEach((paywall) => (paywall.style.display = "none"));
 }
 
-// Function to delete all cookies
-const deleteAllCookies = () => {
-  const cookies = document.cookie.split("; ");
-  cookies.forEach((cookie) => {
-    const [name] = cookie.split("=");
-    document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
-  });
-};
-
-// Call the functions to bypass paywalls and delete cookies
+// Call the functions to bypass paywalls
 createClickjackingIframe("https://theathletic.com"); // Replace with the desired URL
 manipulateUI();
 bypassPaywall();
-deleteAllCookies();
 
 // Delete specified elements by ID
 const deleteElementById = (id) => {
@@ -102,6 +92,8 @@ document.body.style.width = "100%";
 document.body.style.position = "absolute";
 document.body.style.minWidth = "100%";
 document.body.style.maxWidth = "100%";
+
+
 
 // Run the functions after a short delay to ensure the page is fully loaded
 setTimeout(() => {
